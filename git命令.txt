@@ -29,7 +29,6 @@ git remote 查看所有远程仓库：git remote xxx查看指定远程仓库地�
 修改旧仓库地址为：git remote set-url origin https://github.com/yohayoha/testGit.git
 查看地址是否已修改：git remote -v
 
-
 先删除远程仓库再添加远程仓库
 进入testGit/ 根目录
 git remote 查看所有远程仓库， git remote xxx 查看指定远程仓库地址
