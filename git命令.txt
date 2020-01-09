@@ -1,0 +1,57 @@
+﻿https://github.com/longzhengzhi/Java.git
+
+
+git add texts.txt	增加txt文件
+git commit -m "虚拟机字节码执行引擎"你的改动已经提交到了 HEAD但是还没到你的远端仓库。
+git push -u origin master	同步github仓库	执行命令以将这些改动提交到远端仓库
+
+
+git config --global user.name ""
+git config --global user.email ""
+
+git init
+在本地新建一个repo,进入一个项目目录,执行git init,会初始化一个repo,并在当前文件夹下创建一个.git文件夹.
+
+git status
+查询repo的状态.
+git status -s: -s表示short, -s的输出标记会有两列,第一列是对staging区域而言,第二列是对
+working目录而言.
+git add
+在提交之前,Git有一个暂存区(staging area),可以放入新添加的文件或者加入新的改动
+. commit时提交的改动是上一次加入到staging area中的改动,而不是我们disk上的改动.
+git add .
+会递归地添加当前工作目录中的所有文件
+
+创建了新的仓库，要修改github的responsibal仓库地址
+ 直接修改远程地址
+进入testGit/ 根目录
+git remote 查看所有远程仓库：git remote xxx查看指定远程仓库地址（ps:此处的xxx为origin）
+修改旧仓库地址为：git remote set-url origin https://github.com/yohayoha/testGit.git
+查看地址是否已修改：git remote -v
+
+
+先删除远程仓库再添加远程仓库
+进入testGit/ 根目录
+git remote 查看所有远程仓库， git remote xxx 查看指定远程仓库地址
+git remote rm origin
+git remote add origin https://github.com/yohayoha/testGit.git
+
+
+git init 	将当前目录作为git仓库。
+git clone <repo> <directory>  将克隆到指定目录下
+git status 用来查看上次提交之后是否有修改
+git diff 查看执行git status 的结果的详细信息。
+使用 git add 命令将想要快照的内容写入缓存区,而执行 git commit 将缓存区内容添加到仓库中
+git reset HEAD 命令用于取消已缓存的内容。
+
+
+git 分支管理
+git branch  名字	创建分支
+git checkout 名字	切换分支
+git merge 	合并分支
+git branch -d 名字	删除分支
+
+
+git remote add [shortname] [url]	添加一个远程仓库
+git remote -v	查看当前的远程库
+
