@@ -1,0 +1,19 @@
+
+Session 是依赖于cookie的，是服务器端的
+
+1.设置客户端关闭，服务器不关闭，所获得的session值一样
+Httpsession session = new Httpsession();
+Cookie cookie = new Cookie("JSESSIONID",session.getId());
+cookie.setMaxAge(60*60);
+response.add(cookie);
+
+
+2.客户端不关闭，服务器关闭后，两次获取的session是同一个吗？
+??* 不是同一个，但是要确保数据不丢失。tomcat自动完成以下工作
+???* session的钝化：
+????* 在服务器正常关闭之前，将session对象系列化到硬盘上
+???* session的活化：
+????* 在服务器启动后，将session文件转化为内存中的session对象即可。
+
+
+
